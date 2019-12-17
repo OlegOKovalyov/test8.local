@@ -1,0 +1,22 @@
+* {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+body {
+    font-size: 14px;
+}
+
+table {
+    display: table !important;
+}
+
+#btn-filter {
+    float: right;
+    margin-bottom: 0.5rem;
+}
+
+.left-margin{
+    margin:0 .5rem 0 0;
+}
