@@ -2,7 +2,6 @@
 
 //set page headers
 $page_title = "Delete User";
-include_once "header.php";
 include_once 'classes/database.php';
 include_once 'classes/user.php';
 include_once 'initial.php';
@@ -17,15 +16,18 @@ if (isset($_POST['del-btn']))
     $user->delete($id);
     header("Location: delete.php?deleted");
 }
-      // check if the user was deleted
-      if(isset($_GET['deleted'])){
-        echo "<div class=\"alert alert-success alert-dismissable\">";
-        echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
-                    &times;
-              </button>";
-        echo "Success! User is deleted.";
-        echo "</div>";
-      }
+
+include_once "header.php";
+
+// check if the user was deleted
+if(isset($_GET['deleted'])){
+echo "<div class=\"alert alert-success alert-dismissable\">";
+echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
+            &times;
+      </button>";
+echo "Success! User is deleted.";
+echo "</div>";
+}
 ?>
 <!-- Bootstrap Form for deleting a user -->
 <?php
