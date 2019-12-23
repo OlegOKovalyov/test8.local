@@ -1,7 +1,5 @@
 <?php
 
-//set page headers
-$page_title = "Delete User";
 include_once 'classes/database.php';
 include_once 'classes/user.php';
 include_once 'initial.php';
@@ -17,7 +15,10 @@ if (isset($_POST['del-btn']))
     header("Location: delete.php?deleted");
 }
 
+//set page headers
+$page_title = "Delete User";
 include_once "header.php";
+echo "<h2>{$page_title}</h2>";
 
 // check if the user was deleted
 if(isset($_GET['deleted'])){
@@ -42,14 +43,14 @@ echo "</div>";
                     echo"Yes";
                 echo"</button>";
                     echo str_repeat('&nbsp;', 2);
-                echo"<a href='index.php' class='btn btn-default' role='button'>";
+                echo"<a href='index.php' class='btn btn-light' role='button'>";
                     echo" No";
                 echo"</a>";
             echo"</table>";
         echo"</form>";
     }
 else {  // Back to the first page
-        echo"<a href='index.php' class='btn btn-large btn-success'><span class='glyphicon glyphicon-backward'></span> Home </a>";
+        echo"<a href='index.php' class='btn btn-large btn-success'><i class=\"fa fa-arrow-circle-left\" aria-hidden=\"true\"></i></span> Home </a>";
      }
 ?>
 
